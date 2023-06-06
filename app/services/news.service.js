@@ -21,14 +21,14 @@ class NewsService {
 
   // Método para obtener una noticia por su ID
   async getNewsById(id) {
-    const news = await NewsModel.findById(id);
+    const news = await NewsModel.findById(id).populate("videojuego_noticia");
     if (!news) throw new Error("Noticia no encontrada");
     return new NewsDto(news);
   }
 
   // Método para obtener todas las noticias
   async getAllNews() {
-    const news = await NewsModel.find();
+    const news = await NewsModel.find().populate("videojuego_noticia");
     return news.map((n) => new NewsDto(n));
   }
 
