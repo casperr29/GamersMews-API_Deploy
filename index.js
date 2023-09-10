@@ -19,7 +19,7 @@ const whitelist = [
   "http://localhost:8080",
   "https://myapp.co",
   "http://localhost:3000",
-  "https://web-production-58281.up.railway.app",
+  "https://gamersmews-apideployka-production.up.railway.app",
 ];
 const options = {
   origin: (origin, callback) => {
