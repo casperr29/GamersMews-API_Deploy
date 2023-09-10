@@ -20,7 +20,7 @@ const userSchema = new Schema({
     type: Object,
     default: {
       file_name: "default-profile-image.png",
-      path: "D:\\RESPALDO\\ESCUELA\\PW2\\PIA\\Bisonet\\BackEnd\\app\\storage\\default-profile-image.png",
+      path: `${__dirname}\\..\\storage\\default-profile-image.png`,
     },
   },
   reporte_usuario: { type: Number, default: 0, min: 0 },
